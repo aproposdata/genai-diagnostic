@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GenAI Readiness Diagnostic</title>
+</head>
+<body>
+    <h1>🧠 GenAI Readiness Diagnostic</h1>
+    <form method="POST">
+        <label>Do you have structured data pipelines?</label><br>
+        <select name="structured_data">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        <label>Do you have a clearly defined GenAI use case?</label><br>
+        <select name="use_case">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        <label>Is your team familiar with LLMs or GenAI?</label><br>
+        <select name="team_familiar">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        <label>Do you have an executive sponsor for AI initiatives?</label><br>
+        <select name="exec_sponsor">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        <label>Do you have scalable cloud infrastructure?</label><br>
+        <select name="infra_ready">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if result %}
+        <h2>Readiness Level: {{ result }}</h2>
+        <p>{{ recommendation }}</p>
+    {% endif %}
+</body>
+</html>
+
